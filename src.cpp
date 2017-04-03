@@ -1,45 +1,67 @@
 #include <iostream>
 #include <stdlib.h>
+#include <conio.h>
 
-float pamiec, zegar, DDR1, DDR2, DDR3;
+float pamiec, zegar, DDR1, DDR2, DDR3, typ;
 
 using namespace std;
 
 int main()
 {
-    cout << "Jaka pamiec?" << endl;
-    cout << "\t 1. DDR" << endl;
-    cout << "\t 2. DDR2" << endl;
-    cout << "\t 3. DDR3" << endl;
     START:
+    cout << "Co chcesz zrobic?" << endl;
+    cout << "\t 1. Oblicz przepustowosc pamieci DDR" << endl;
+    cout << "\t 2. Oblicz przepustowosc pamieci DDR2" << endl;
+    cout << "\t 3. Oblicz przepustowosc pamieci DDR3" << endl;
+    cout << "\t 4. Oblicz czestotliwosc zegara magistrali pamieci DDR" << endl;
+    cout << "\t 5. Oblicz czestotliwosc zegara magistrali pamieci DDR2" << endl;
+    cout << "\t 6. Oblicz czestotliwosc zegara magistrali pamieci DDR3" << endl;
+    WYBOR:
     cin >> pamiec;
     if (pamiec==1)
     {
         system("cls");
-        cout << "Ile MHz ma twoja kosc? ";
+        cout << "Ile MHz ma zegar? ";
         cin >> zegar;
         DDR1 = zegar*2*64/8;
         cout << endl << "Wynik: " << DDR1;
+        getch();
+        goto START;
     }
     else if (pamiec==2)
     {
         system("cls");
-        cout << "Ile MHz ma twoja kosc? ";
+        cout << "Ile MHz ma zegar? ";
         cin >> zegar;
         DDR2 = zegar*2*2*64/8;
         cout << endl << "Wynik: " << DDR2;
+        getch();
+        goto START;
     }
     else if (pamiec==3)
     {
         system("cls");
-        cout << "Ile MHz ma twoja kosc? ";
+        cout << "Ile MHz ma zegar? ";
         cin >> zegar;
         DDR3 = zegar*2*4*64/8;
         cout << endl << "Wynik: " << DDR3;
+        getch();
+        goto START;
+    }
+    else if (pamiec==4)
+    {
+        system("cls");
+        cout << "Jaki masz typ pamieci?" << endl;
+        cout << "\t 1. PC-1600" << endl;
+        cout << "\t 2. PC-2100" << endl;
+        cout << "\t 3. PC-2700" << endl;
+        cout << "\t 4. PC-3200" << endl;
+        cout << "\t 5. PC-3500" << endl;
+        cin >> typ;
     }
     else
     {
-        goto START;
+        goto WYBOR;
     }
     return 0;
 }
