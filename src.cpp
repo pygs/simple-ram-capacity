@@ -57,8 +57,48 @@ int main()
         cout << "\t 3. PC-2700" << endl;
         cout << "\t 4. PC-3200" << endl;
         cout << "\t 5. PC-3500" << endl;
+        TYP:
         cin >> typ;
     }
+        if (typ==1)
+        {
+            cout << "Zegar magistrali = 100 MHz";
+            getch();
+            system("cls");
+            goto START;
+        }
+        else if (typ==2)
+        {
+            cout << "Zegar magistrali = 133 MHz";
+            getch();
+            system("cls");
+            goto START;
+        }
+        else if (typ==3)
+        {
+            cout << "Zegar magistrali = 166 MHz";
+            getch();
+            system("cls");
+            goto START;
+        }
+        else if (typ==4)
+        {
+            cout << "Zegar magistrali = 200 MHz";
+            getch();
+            system("cls");
+            goto START;
+        }
+        else if (typ==5)
+        {
+            cout << "Zegar magistrali = 216 MHz";
+            getch();
+            system("cls");
+            goto START;
+        }
+        else
+        {
+            goto TYP;
+        }
     else
     {
         goto WYBOR;
